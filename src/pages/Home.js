@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Movie from '../components/Movie';
+import { MY_API_KEY } from '../global';
 
-const MY_API_KEY = '3b62cbd3019cef6ea3bcc5ecce56c01c';
 const TRENDING_MOVIES_API = `https://api.themoviedb.org/3/trending/all/day?api_key=${MY_API_KEY}`;
 const SEARCH_API = `https://api.themoviedb.org/3/search/movie?api_key=${MY_API_KEY}&language=en-US&include_adult=false`;
 
@@ -11,7 +11,7 @@ const Home = () => {
     const [moviesList, setMoviesList] = useState([]);
 
     useEffect(() => {
-        fetch(TRENDING_MOVIES_API).then( res => res.json()).then( data => {
+        fetch(SEARCH_API + '&query=a').then( res => res.json()).then( data => {
             setMoviesList(data.results);
             console.log(data.results);
         });
@@ -32,8 +32,11 @@ const Home = () => {
 
     return (
       <div className="page-content">
-          <input type="text" placeholder="Search" onChange={handleSearch} />
-        {mappedMovies}
+            <div className="intro">
+                <h1>Intro</h1>
+            </div>
+            <input type="text" placeholder="Search" onChange={handleSearch} />
+            {mappedMovies}
       </div>
     );
 }

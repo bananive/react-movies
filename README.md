@@ -16,7 +16,7 @@ Fetch dagi xatoliklar ustida ishlash;
 
 ### Todo 2
 
-Css da stillar qo'shish
+Css da stillar qo'shish;
 
 ### Todo 3
 
