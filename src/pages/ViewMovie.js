@@ -17,7 +17,7 @@ const ViewMovie = () => {
         fetch(SINGLE_MOVIE_API + id + API_PARAMS).then( res => res.json()).then(data => {
             setMovieInfo(data);
         });
-    }, []);
+    }, [id]);
 
 
     return (

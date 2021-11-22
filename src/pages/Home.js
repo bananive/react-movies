@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Movie from '../components/Movie';
 import { MY_API_KEY } from '../global';
 
-const TRENDING_MOVIES_API = `https://api.themoviedb.org/3/trending/all/day?api_key=${MY_API_KEY}`;
+// const TRENDING_MOVIES_API = `https://api.themoviedb.org/3/trending/all/day?api_key=${MY_API_KEY}`;
 const SEARCH_API = `https://api.themoviedb.org/3/search/movie?api_key=${MY_API_KEY}&language=en-US&include_adult=false`;
 
 
